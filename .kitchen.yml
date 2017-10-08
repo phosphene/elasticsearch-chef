@@ -12,9 +12,7 @@ provisioner:
   name: chef_solo
 
 platforms:
-  - name: ubuntu-14.04
-#  - name: centos-7.0
-#  - name: ubuntu-15.04
+  - name: ubuntu-16.04
 
 suites:
   - name: default
@@ -23,18 +21,21 @@ suites:
       - recipe[elastic::install]
       - recipe[elastic::default]
     attributes:
-         elastic:
-	    dir: "/srv/hops"
-            user: 'glassfish'
-            default:
-                private_ips: ["10.0.2.15"]
-                public_ips: ["10.0.2.15"]
-            private_ips: ["10.0.2.15"]
-            public_ips: ["10.0.2.15"]
-         kagent:
-            user: 'glassfish'
-            private_ips: ["10.0.2.15"]
-            public_ips: ["10.0.2.15"]
-         private_ips: ["10.0.2.15"]
-         public_ips: ["10.0.2.15"]
-         vagrant: true
+      elastic:
+        dir: '/srv/hops'
+        user: 'glassfish'
+        default:
+          private_ips: ["10.0.2.15"]
+          public_ips: ["10.0.2.15"]
+          private_ips: ["10.0.2.15"]
+          public_ips: ["10.0.2.15"]
+        kagent:
+          user: 'glassfish'
+          private_ips: ["10.0.2.15"]
+          public_ips: ["10.0.2.15"]
+        private_ips: ["10.0.2.15"]
+        public_ips: ["10.0.2.15"]
+
+
+
+        vagrant: true

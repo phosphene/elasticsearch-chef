@@ -10,3 +10,4 @@ cookbook 'ndb', github: "hopshadoop/ndb-chef", branch: "master"
 
 cookbook 'ulimit2', '~> 0.2.0'
 cookbook 'elasticsearch', '~> 2.5.0'
+cookbook 'conda', github: "hopshadoop/conda-chef", branch: "master"
